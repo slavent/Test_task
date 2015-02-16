@@ -1,0 +1,13 @@
+#ch-outer{
+	background: #fff;    
+	border-left: 3px solid #d2c8b9;
+	border-bottom: 3px solid #d2c8b9;
+}
+
+#ch-nav div .in-user-btn{
+	border-bottom: 3px solid #414664;
+}
+
+#ch-nav div .out-user-btn{
+	border-bottom: 3px solid #998b47;
+}

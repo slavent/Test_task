@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Test task - chat</title>
+	<link rel="stylesheet" href="css/style.css">
+	<!--[if IE 8]><link href="css/ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
+</head>
+<body>
+	<div id="wrap">
+
+		<!-- CHAT: start -->
+		<div id="ch-outer">
+			<div id="ch-inner">
+				<div id="ch-msg-wrap">
+					<script id="msg-tpml" type="text/template">
+						<div class='msg <%= user %>-msg'><div class='trngl'></div><%= msg %></div>
+					</script>
+				</div>
+			</div>
+
+			<div id="ch-scroll-wrap">
+				<div id="ch-handler"></div>
+			</div>
+		</div>
+
+		<div id="ch-nav">
+			<div><input type="button" class="btn in-user-btn" value="Получить сообщение" data-user="in"></div>
+			<div><input type="button" class="btn out-user-btn" value="Получить сообщение" data-user="out"></div>
+		</div>
+		<!-- CHAT: end -->
+
+	</div>
+
+	<script src="js/lib/jquery-1.11.1.min.js"></script>
+	<script src="js/lib/underscore-min.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/btnModule.js"></script>
+	<script src="js/dlgModule.js"></script>
+	<script>
+	$(function(){
+		$("#ch-outer").scroller();
+		$(".btn").on("click", btnModule.getData);
+	});
+	</script>
+</body>
+</html>
+				
